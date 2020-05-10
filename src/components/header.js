@@ -3,12 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#016070`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
+
     <div
 
     >
