@@ -65,19 +65,15 @@ const Layout = ({ children }) => {
                     <span class="link-text">Contact</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">
+                    <i class="fal fa-envelope"></i>
+                    <span class="link-text">Blog</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
-    <div class="home-wallpaper-bg">
-        <div class="content">
-        <div class="title">
-            <h1>Resilience</h1>
-        </div>
-        <div class="subtitle">
-            <h2>Under Construction</h2>
-        </div>
-    </div>
-</div>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
