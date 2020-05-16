@@ -14,7 +14,7 @@ const IndexPage = ( {data} ) => (
             <h1>Resilience</h1>
         </div>
         <div class="subtitle">
-            <h2>Under Construction</h2>
+            <h2>Chiropractic &amp; Rehabilitation</h2>
         </div>
     </div>
 </div>

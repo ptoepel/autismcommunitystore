@@ -739,15 +739,15 @@ grid-template-columns: repeat(2,1fr);
 
       }
 
-      .injuries .transition, p, ul li i:before, ul li i:after {
+      .injuries .transition,.injuries p,.injuries ul li i:before,.injuries ul li i:after {
         transition: all 0.25s ease-in-out;
       }
       
-      .injuries .flipIn, h1, ul li {
+      .injuries .flipIn, .injuries h1, .injuries ul li {
         animation: flipdown 0.5s ease both;
       }
       
-      .injuries .no-select, h2 {
+  .injuries .no-select, .injuries h2 {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -761,7 +761,7 @@ grid-template-columns: repeat(2,1fr);
 
        
       
-      .injuries h1, h2 {
+  .injuries h1,.injuries h2 {
         color: #ff6873;
       }
       
@@ -829,7 +829,7 @@ grid-template-columns: repeat(2,1fr);
         margin-top: 16px;
         right: 0;
       }
-      .injuries  ul li i:before, ul li i:after {
+    .injuries  ul li i:before, .injuries ul li i:after {
         content: "";
         position: absolute;
         background-color: #ff6873;

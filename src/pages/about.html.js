@@ -32,7 +32,7 @@ const AboutPage = ( {data} ) => (
                 <div className="about-me">
                     <div className="subtitle"><h3>About Me</h3></div>
                     <div className="about-me-content">
-                        <p>My name is Braden O'Dell. I am Colorado native. I am what some might call a bit of a nerd. I enjoy dancing, hiking, and occasionally Dungeons and Dragons. I know the stigma that this comes with but trust me, I am an amazing person. I got involved in chiropractic servics because I wanted to help people. One of those ways I can is by building trust, you know a bit about me, let me learn about you. We can move in healing you afterwards. I am here to help.</p>
+                      <p>{data.strapiAboutBio.bio}</p>
                     </div>
                 </div>
                 <div className="creds-container">
@@ -56,3 +56,19 @@ const AboutPage = ( {data} ) => (
 )
 
 export default AboutPage
+
+
+export const aboutQuery = graphql`
+  query AboutQuery {
+    strapiAboutBio{
+      id
+      bio
+    }
+    strapiCredentials{
+      id
+      Label
+      Link
+    }
+
+  }
+`

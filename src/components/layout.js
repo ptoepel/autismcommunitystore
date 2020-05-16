@@ -75,11 +75,7 @@ const Layout = ({ children }) => {
     </nav>
 
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
 
-        </footer>
 
     </>
   )

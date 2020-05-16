@@ -30,7 +30,7 @@ const ContactPage = ( {data} ) => (
         </h3>
     </div>
     <div className="contact-form-content">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, laboriosam sunt iste corporis nemo repellendus fugit consequatur totam repudiandae, rem reprehenderit distinctio sed eum natus inventore tempora? Rem, ducimus non.</p>
+<p>{data.strapiContactText.contact}</p>
     </div>
      <div className="social">
          <ul>
@@ -76,6 +76,16 @@ export default ContactPage
 
 
 
+export const ContactQuery = graphql`
+query ContactQuery {
+    strapiContactText {
+        id
+        contact
+
+    }
+}
+  
+`
 
 
 

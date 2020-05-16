@@ -24,7 +24,7 @@ const BlogPage = ( {data} ) => (
       <li key={document.node.id}>
       
         <h2>
-        <Link to={`/${document.node.id}`}>
+        <Link to={`/${document.node.slug}`}>
           {document.node.title}
         </Link>
         </h2>
@@ -41,12 +41,13 @@ const BlogPage = ( {data} ) => (
 export default BlogPage
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query Query {
     allStrapiArticle {
       edges {
         node {
           id
           title
+          slug
 content 
           author
           date

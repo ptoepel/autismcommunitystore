@@ -67,3 +67,18 @@ const LocationPage = ( {data} ) => (
 )
 
 export default LocationPage
+
+
+
+
+export const locationQuery = graphql`
+query LocationsQuery {
+    strapiHours {
+        id
+        Hours
+    }
+
+  }
+  
+`
+

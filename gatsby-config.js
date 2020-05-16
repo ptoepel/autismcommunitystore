@@ -36,8 +36,10 @@ module.exports = {
             `article`,
             `user`,
             `categories`,
-            `injuries`
+            `injuries`,
+            `services`,
           ],
+          singleTypes: [`about-bio`,`address`,`credentials`,`hours`,`contact-text`],
           queryLimit:1000,
         },
     },

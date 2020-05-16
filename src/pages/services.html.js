@@ -19,109 +19,27 @@ const ServicesPage = ( {data} ) => (
     </div>
     <div className="services-content">
         <ul>
-            <li>
+
+            {data.allStrapiServices.edges.map(document =>(
+
+
+
+            <li key={document.node.id}>
                 <div className="card">
                     <div className="card-icon-container">
                         <i className="fas fa-user-nurse"></i>
                     </div>
                     <div className="card-content-container">
                     <div className="card-title">
-                        <h3>Professional</h3>
+                        <h3>{document.node.title}</h3>
                     </div>
                     <div className="card-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus quibusdam? Voluptate, sequi! Explicabo sequi esse animi dicta. Earum minus adipisci consectetur facilis laboriosam? Odio laudantium libero sed deserunt reprehenderit!</p>
+                        <p>{document.node.content}</p>
                     </div>
                 </div>
                 </div>
             </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="fas fa-star-of-life"></i>
-                    </div>
-                    <div className="card-content-container">
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="fas fa-notes-medical"></i>
-                    </div>
-                    <div className="card-content-container">
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="fas fa-stethoscope"></i>
-                    </div>
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="far fa-clinic-medical"></i>
-                    </div>
-                    <div className="card-content-container">
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="far fa-user-md"></i>
-                    </div>
-                    <div className="card-content-container">
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <div className="card-icon-container">
-                        <i className="fas fa-salad"></i>
-                    </div>
-                    <div className="card-content-container">
-                    <div className="card-title">
-                        <h3></h3>
-                    </div>
-                    <div className="card-content">
-                        <p></p>
-                    </div>
-                    </div>
-                </div>
-            </li>
+    ))}
         </ul>
         
     </div>
@@ -163,9 +81,19 @@ query InjuriesQuery {
           id
           title
           content
+
         }
       }
     }
+   allStrapiServices{
+        edges {
+          node {
+            id
+            title
+            content
+          }
+        }
+      }
   }
   
 `
