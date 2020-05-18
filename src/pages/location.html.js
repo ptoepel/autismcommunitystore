@@ -35,7 +35,7 @@ const LocationPage = ( {data} ) => (
 
             </div>
             <div className="left-content"></div>
-            <div className="left-map"><div id="map"></div></div>
+                <div className="left-map"><div id="map">{data.staticMap.mapUrl}</div></div>
         </div>
         <div className="right">
             <div className="right-top"></div>
@@ -86,6 +86,7 @@ query LocationsQuery {
         id
         address
     }
+
 }
   
 `
