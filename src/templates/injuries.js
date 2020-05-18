@@ -5,10 +5,20 @@ import Layout from '../components/layout'
 
 const InjuryTemplate = ({ data }) => (
   <Layout>
-    <h1>{data.strapiInjuries.title}</h1>
+      <div class="home-wallpaper-bg">
+        <div class="content">
+        <div class="title">
+        <h1>{data.strapiInjuries.title}</h1>
+        </div>
+
+    </div>
+</div>
+<div className="main-content-location">
+ 
 
    
     <p>{data.strapiInjuries.content}</p>
+  </div>
   </Layout>
 )
 

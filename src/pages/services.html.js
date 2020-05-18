@@ -45,7 +45,7 @@ const ServicesPage = ( {data} ) => (
     </div>
     <div className="injuries-container">
         <div className="injuries">
-            <h1>CSS + HTML only Accordion Element</h1>
+            <h3>Injuries</h3>
 <ul>
 
 

@@ -89,19 +89,19 @@ header{
     font-weight: bolder;
     letter-spacing:0.3ch;
 }
-.logo i {
+.logo svg {
     transform: rotate(0deg);
     transition:transform 200ms ease;
 }
 
-.navbar:hover .logo i {
+.navbar:hover .logo svg {
 
         transform: rotate(-180deg);
         transition:transform 200ms ease;
     
 }
 
-.nav-link i{
+.nav-link svg{
     min-width:2rem;
     margin:0 1.5rem;
 }
@@ -655,7 +655,7 @@ grid-template-columns: repeat(2,1fr);
         align-items: center;
     }
 
-    .services-content ul li .card .card-icon-container i{
+    .services-content ul li .card .card-icon-container svg{
         font-size:5rem;
     }
 
@@ -684,7 +684,6 @@ grid-template-columns: repeat(2,1fr);
 
 
     input {
-        color:white;
         font-family: Helvetica, Arial, sans-serif;
         font-weight:500;
         font-size: 18px;
@@ -704,10 +703,14 @@ grid-template-columns: repeat(2,1fr);
       
       textarea {
         height: 300px;
+                font-weight:500;
+        font-size: 18px;
         line-height: 150%;
         width:100%;
         resize:vertical;
         border:2px solid var(--pacific-nw-blue);
+        font-family: Helvetica, Arial, sans-serif;
+                border-radius: 5px;
       }
       
       input[type="submit"] {
@@ -725,6 +728,8 @@ grid-template-columns: repeat(2,1fr);
         margin-top:-4px;
         font-weight:700;
         margin-top:100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5ch;
       }
       [type="submit"]:hover { background:var(--pacific-nw-blue); }
 
@@ -739,7 +744,7 @@ grid-template-columns: repeat(2,1fr);
 
       }
 
-      .injuries .transition,.injuries p,.injuries ul li i:before,.injuries ul li i:after {
+      .injuries .transition,.injuries p,.injuries ul li svg:before,.injuries ul li svg:after {
         transition: all 0.25s ease-in-out;
       }
       
@@ -823,23 +828,23 @@ grid-template-columns: repeat(2,1fr);
       .injuries  ul li:last-of-type {
         padding-bottom: 0;
       }
-      .injuries  ul li i {
+      .injuries  ul li svg {
         position: absolute;
         transform: translate(-6px, 0);
         margin-top: 16px;
         right: 0;
       }
-    .injuries  ul li i:before, .injuries ul li i:after {
+    .injuries  ul li svg:before, .injuries ul li svg:after {
         content: "";
         position: absolute;
         background-color: #ff6873;
         width: 3px;
         height: 9px;
       }
-      .injuries ul li i:before {
+      .injuries ul li svg:before {
         transform: translate(-2px, 0) rotate(45deg);
       }
-      .injuries ul li i:after {
+      .injuries ul li svg:after {
         transform: translate(2px, 0) rotate(-45deg);
       }
       .injuries  ul li input[type=checkbox] {
@@ -855,10 +860,10 @@ grid-template-columns: repeat(2,1fr);
         opacity: 0;
         transform: translate(0, 50%);
       }
-      .injuries ul li input[type=checkbox]:checked ~ i:before {
+      .injuries ul li input[type=checkbox]:checked ~ svg:before {
         transform: translate(2px, 0) rotate(45deg);
       }
-      .injuries ul li input[type=checkbox]:checked ~ i:after {
+      .injuries ul li input[type=checkbox]:checked ~ svg:after {
         transform: translate(-2px, 0) rotate(-45deg);
       }
       

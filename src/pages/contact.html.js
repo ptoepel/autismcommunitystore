@@ -83,6 +83,14 @@ query ContactQuery {
         contact
 
     }
+    allStrapiSocials{
+        edges {
+            node {
+                Label
+                Url
+            }
+        }
+    }
 }
   
 `

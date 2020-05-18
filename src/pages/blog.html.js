@@ -11,15 +11,16 @@ const BlogPage = ( {data} ) => (
   <div class="home-wallpaper-bg">
         <div class="content">
         <div class="title">
-            <h1>Resilience</h1>
+            <h1>Blog</h1>
         </div>
         <div class="subtitle">
-            <h2>Under Construction</h2>
+            <h2>Information</h2>
         </div>
     </div>
 </div>
 
   <ul>
+
     {data.allStrapiArticle.edges.map(document =>(
       <li key={document.node.id}>
       
@@ -32,6 +33,7 @@ const BlogPage = ( {data} ) => (
     <p>{document.node.content}</p>
       </li>
     ))}
+    
   </ul>
 
 
@@ -48,7 +50,7 @@ export const pageQuery = graphql`
           id
           title
           slug
-content 
+          content 
           author
           date
           image{

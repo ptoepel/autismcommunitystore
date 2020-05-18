@@ -25,6 +25,7 @@ const AboutPage = ( {data} ) => (
                 <div className="about-me-content">
                     <div className="name-container">
                         <h3>BRADEN O'DELL</h3>
+                        <p>Doctor of Chiropractic | Bachelors of Science: Biochemistry and Molecular Biology | Bachelors of Science: Human Biology</p>
                     </div>
                 </div>
             </div>
@@ -38,12 +39,19 @@ const AboutPage = ( {data} ) => (
                 <div className="creds-container">
                     <div className="subtitle"><h3>Credentials</h3></div>
                     <div className="creds">
-                        <ul>
-                            <li><a href="">The Joint</a></li>
-                            <li><a href="">School</a></li>
-                            <li><a href="">Workshop</a></li>
-                            <li><a href="">Front Line</a></li>
-                        </ul>
+                    <ul>
+          {data.allStrapiCredentials.edges.map(document =>(
+      <li key={document.node.id}>
+      
+
+        <a href={document.node.Link}>
+          {document.node.Label}
+        </a>
+
+
+      </li>
+    ))}
+  </ul>
                     </div>
                 </div>
             </div>
@@ -64,11 +72,14 @@ export const aboutQuery = graphql`
       id
       bio
     }
-    strapiCredentials{
-      id
-      Label
-      Link
+    allStrapiCredentials {
+      edges {
+        node {
+          id
+          Label
+          Link
+        }
+      }
     }
-
-  }
+}
 `

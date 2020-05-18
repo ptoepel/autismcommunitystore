@@ -8,57 +8,52 @@ import Layout from "../components/layout"
 const LocationPage = ( {data} ) => (
   <Layout>
 
-<div class="home-wallpaper-bg">
-        <div class="content">
-            <div class="title">
+<div className="home-wallpaper-bg">
+        <div className="content">
+            <div className="title">
                 <h1>Location</h1>
             </div>
-            <div class="subtitle">
+            <div className="subtitle">
                 <h2>The Denver Office</h2>
             </div>
         </div>
     </div>
-    <div class="main-content-location">
-        <div class="left">
-            <div class="left-title">
-                <div class="left-title-top">
+    <div className="main-content-location">
+        <div className="left">
+            <div className="left-title">
+                <div className="left-title-top">
                     <h3>Hours</h3>
                 </div>
-                <div class="left-title-content">
+                <div className="left-title-content">
                     <ul>
-                        <li><span class="day">Monday</span><span class="hour-open">9:00AM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Tuesday</span><span class="hour-open">9:00AM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Wednesday</span><span class="hour-open">9:00AM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Thursday</span><span class="hour-open">9:00AM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Friday</span><span class="hour-open">9:00AM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Saturday</span><span class="hour-open">12:00PM</span> - <span class="hour-closed">5:00PM</span></li>
-                        <li><span class="day">Sunday</span><span class="hour-open">12:00PM</span> - <span class="hour-closed">5:00PM</span></li>
-                    </ul>
+                {data.allStrapiHours.edges.map(document =>(
+ <li key={document.node.id}><span className="day">{document.node.Day}</span><span className="hour-open">{document.node.Opentime}</span> - <span className="hour-closed">{document.node.Closetime}</span></li>
+
+    ))}
+                </ul>
                 </div>
 
             </div>
-            <div class="left-content"></div>
-            <div class="left-map"><div id="map"></div></div>
+            <div className="left-content"></div>
+            <div className="left-map"><div id="map"></div></div>
         </div>
-        <div class="right">
-            <div class="right-top"></div>
-            <div class="right-middle">
-                <div class="middle-top">
+        <div className="right">
+            <div className="right-top"></div>
+            <div className="right-middle">
+                <div className="middle-top">
                     <h3>Address</h3>
                 </div>
-                <div class="middle-content">
-                    <p><span>Parking:</span> Can be found on the side. Please look for the blue door.</p>
-
-                    <p><span>Walking Directions:</span> Once you are at our building please, look for suite #4. This building shares space with other successfull Denver businesses.</p>
-                    <ul>
-                        <li><address>855 Inca St #4</address></li>
-                        <li><address>Denver Colorado</address></li>
-                        <li><address>80402</address></li>
-                    </ul>
+                <div className="middle-content">
+                <div className="parking">
+                {data.strapiParking.parking}
+                </div>
+                <div className="address">
+                {data.strapiAddress.address}
+                </div>
                 </div>
 
             </div>
-            <div class="right-bottom"></div>
+            <div className="right-bottom"></div>
         </div>
 
     </div>
@@ -73,12 +68,25 @@ export default LocationPage
 
 export const locationQuery = graphql`
 query LocationsQuery {
-    strapiHours {
-        id
-        Hours
-    }
+    allStrapiHours {
+        edges {
+            node {
+                Day
+                Closetime
+                Opentime
 
-  }
+            }
+        }
+    }
+    strapiParking {
+        id
+        parking
+      }
+    strapiAddress {
+        id
+        address
+    }
+}
   
 `
 

@@ -4,7 +4,6 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header>
-<script src="https://kit.fontawesome.com/6185436977.js" crossorigin="anonymous"></script>
 
   </header>
 )
