@@ -51,25 +51,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
      `gatsby-plugin-offline`,
-     {
-            resolve: `gatsby-source-googlemaps-static`,
-            options: {
-                key: `AIzaSyBUvrGEF4GphwIjEdFuylWB7enAAWsKlY8`,
-                center: `39.730,-104.998`,
-            },
-      },
-      {
-      resolve:"gatsby-plugin-seo",
-      options: {
-        siteName: "Example Company",
-        defaultSiteImage: "/img/logo.png",
-        siteUrl: "https://example.com",
-        twitterCreator: "@twitterhandle",
-        twitterSite: "@twitterhandle",
+
       
-          
-      }
-    }
-  
   ],
 }
