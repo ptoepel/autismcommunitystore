@@ -54,6 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
+  
   const getAuthors = makeRequest(graphql, `
     {
       allStrapiUser {
