@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
-
+  
 
 
   const getInjuries = makeRequest(graphql, `
@@ -84,6 +84,7 @@ exports.createPages = ({ actions, graphql }) => {
   // Queries for articles and authors nodes to use in creating pages.
   return Promise.all([
     getArticles,
+
     getInjuries,
   ])
 };
