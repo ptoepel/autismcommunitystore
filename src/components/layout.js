@@ -13,15 +13,7 @@ import Header from "./header"
 
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+
 
   return (
     <>
@@ -35,7 +27,7 @@ const Layout = ({ children }) => {
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUvrGEF4GphwIjEdFuylWB7enAAWsKlY8&callback=initMap"
     async defer></script>
         </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header  />
 
             <nav class="navbar">
         <ul class="navbar-nav">
