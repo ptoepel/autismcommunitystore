@@ -44,31 +44,31 @@ const Layout = ({ children }) => {
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./about.html" class="nav-link">
+                <a href="../about.html" class="nav-link">
                     <i class="fas fa-user"></i>
                     <span class="link-text">About</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./services.html" class="nav-link">
+                <a href="../services.html" class="nav-link">
                     <i class="fas fa-notes-medical"></i>
                     <span class="link-text">Services</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./location.html" class="nav-link">
+                <a href="../location.html" class="nav-link">
                     <i class="fas fa-map-marker-alt"></i>
                     <span class="link-text">Location</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./blog.html" class="nav-link">
+                <a href="../blog.html" class="nav-link">
                 <i class="fas fa-blog"></i>
                     <span class="link-text">Blog</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./contact.html" class="nav-link">
+                <a href="../contact.html" class="nav-link">
                     <i class="fal fa-envelope"></i>
                     <span class="link-text">Contact</span>
                 </a>
