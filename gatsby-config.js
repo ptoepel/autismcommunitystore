@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Resilience`,
-    description: 'chiropractic services chiropractor rehabilitation',
-    author: `Braden ODell`,
+    title: `Autism Community Store`,
+    description: 'Autism Community Store, So Much More Than A Store',
+    author: `Patrick Toepel`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
