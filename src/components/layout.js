@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
             <li class="logo">
                 <a href="/" class="nav-link">
                     <i class="fab fa-strava"></i>
-                <span class="link-text">Resilience</span>
+                <span class="link-text">Autism Community Store</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
             <li class="nav-item">
                 <a href="../services.html" class="nav-link">
                     <i class="fas fa-notes-medical"></i>
-                    <span class="link-text">Services</span>
+                    <span class="link-text">Store</span>
                 </a>
             </li>
             <li class="nav-item">
